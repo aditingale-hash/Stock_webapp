@@ -7,7 +7,7 @@ quandl.ApiConfig.api_key = "_4zc86ZxsiJzYAbrG7xt"
 
 symbol= {} #creating a dict
 today = str(date.today()) # todays date
-with open("C:/Users/aditi/PycharmProjects/pythonProject/symbols.txt") as f:
+with open("https://raw.githubusercontent.com/aditingale-hash/Stock_wepapp/master/symbol.txt") as f:
     for line in f:
         (key, val) = line.split("|")
         symbol[(key)] = val.rstrip()
