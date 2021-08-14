@@ -18,11 +18,11 @@ with open("./symbol.txt") as f:
 # and adding to symbol like this key have this value
 
 
-st.sidebar.header("*Stock Symbol*")
-with st.sidebar.form('Form1'):
+st.header("*Stock Symbol*")
+with st.form('Form1'):
   #stock = st.selectbox('wWich stocks you have', symbol.keys())
  # st.form_submit_button('Submit')
- stock = st.sidebar.selectbox(
+ stock = st.selectbox(
     'which stocks you have',
    symbol.keys()) # displaing only keys names of stock
 ticker = symbol[stock] # getting back the code of stock by stock name
@@ -39,8 +39,8 @@ st.title(f'{stock} portfolio')
 
 st.write(data.loc[:,::-1]) 
 int_val = 1
-st.sidebar.header("*Enter your Stock*")
-with st.sidebar.form(key='my_form'):
+st.header("*Enter your Stock*")
+with st.form(key='my_form'):
   int_val = st.number_input(label= 'How many stocks you have', value=1, step=1)
   submit_button = st.form_submit_button(label='Calculate')
     
