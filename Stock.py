@@ -22,7 +22,7 @@ st.header("*Stock Symbol*")
 
   #stock = st.selectbox('wWich stocks you have', symbol.keys())
  # st.form_submit_button('Submit')
- stock = st.selectbox(
+stock = st.selectbox(
     'which stocks you have',
    symbol.keys()) # displaing only keys names of stock
 ticker = symbol[stock] # getting back the code of stock by stock name
