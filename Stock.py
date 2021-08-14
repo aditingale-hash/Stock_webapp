@@ -41,7 +41,7 @@ st.write(data.loc[:,::-1])
 int_val = 1
 st.header("*Enter your Stock*")
 with st.form(key='my_form'):
-  int_val = st.number_input(label= 'How many stocks you have', value=1, step=4)
+  int_val = st.number_input(label= 'How many stocks you have', value=1, step=1)
   submit_button = st.form_submit_button(label='Calculate')
     
 st.title('Enter Stock Value of your to check its cureent value')
