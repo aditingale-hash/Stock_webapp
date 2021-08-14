@@ -44,9 +44,10 @@ with st.sidebar.form(key='my_form'):
   int_val = st.number_input(label= 'How many stocks you have', value=1, step=1)
   submit_button = st.form_submit_button(label='Calculate')
     
-st.title(f'{stock} cureent price of your stock')
+
 #display data  now we can disply data like last 5 days so we can plot graph your turn
 if(int_val > 1):
+    st.title('cureent price of your stock')
   data_normal['Open'] = data_normal['Open'].apply(lambda x: x*int_val)
   data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val)
   data_normal['High'] = data_normal['High'].apply(lambda x: x*int_val)
