@@ -21,7 +21,7 @@ with open("./symbol.txt") as f:
 st.sidebar.header("*Stock Symbol*")
 with st.sidebar.form('Form1'):
   stock = st.selectbox('wWich stocks you have', symbol.keys())
-  st.form_submit_button('Submit')
+ # st.form_submit_button('Submit')
 # stock = st.sidebar.selectbox(
 #     'which stocks you have',
 #   symbol.keys()) # displaing only keys names of stock
