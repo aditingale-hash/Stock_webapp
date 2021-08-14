@@ -50,4 +50,4 @@ if(int_val > 1):
   data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
   newData = data_normal.T
   # newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
-  st.write(newData.loc[:,::-1]
+  st.write(data.loc[:,::-1])
