@@ -19,7 +19,7 @@ with open("./symbol.txt") as f:
 
 
 st.header("*Stock Symbol*")
-with st.form('Form1'):
+
   #stock = st.selectbox('wWich stocks you have', symbol.keys())
  # st.form_submit_button('Submit')
  stock = st.selectbox(
