@@ -39,7 +39,8 @@ st.title(f'{stock} portfolio')
 
 st.write(data.loc[:,::-1]) 
 int_val = 1
-with st.form(key='my_form'):
+st.sidebar.header("*Enter your Stock*")
+with st.sidebar.form(key='my_form'):
   int_val = st.number_input(label= 'How many stocks you have', value=1, step=1)
   submit_button = st.form_submit_button(label='Calculate')
 #display data  now we can disply data like last 5 days so we can plot graph your turn
