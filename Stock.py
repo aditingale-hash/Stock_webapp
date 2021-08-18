@@ -54,5 +54,5 @@ data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val)
  # data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
   #newData = data_normal.T
   # newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
-st.write(data.loc[3:4,:1:])
+st.write(data.loc['Close',:1:-1])
 st.write(data_normal['Close'])
