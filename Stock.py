@@ -3,6 +3,12 @@ import streamlit as st
 import pandas as pd
 from datetime import date, timedelta
 from datetime import date
+import dash
+from dash.dependencies import Input, Output
+import dash_table
+import dash_core_components as dcc
+import dash_html_components as html
+
 quandl.ApiConfig.api_key = "_4zc86ZxsiJzYAbrG7xt"   
 
 symbol= {} #creating a dict
@@ -54,5 +60,48 @@ data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val)
  # data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
   #newData = data_normal.T
   # newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
-st.write(data.loc['Close',::-1])
+#st.write(data.loc['Close',::-1])
 #st.write(data_normal['Close'])
+app = dash.Dash(__name__)
+
+params = [
+    'Weight', 'Torque', 'Width', 'Height',
+    'Efficiency', 'Power', 'Displacement'
+]
+
+app.layout = html.Div([
+    dash_table.DataTable(
+        id='table-editing-simple',
+        columns=(
+            [{'id': 'Model', 'name': 'Model'}] +
+            [{'id': p, 'name': p} for p in params]
+        ),
+        data=[
+            dict(Model=i, **{param: 0 for param in params})
+            for i in range(1, 5)
+        ],
+        editable=True
+    ),
+    dcc.Graph(id='table-editing-simple-output')
+])
+
+
+@app.callback(
+    Output('table-editing-simple-output', 'figure'),
+    Input('table-editing-simple', 'data'),
+    Input('table-editing-simple', 'columns'))
+def display_output(rows, columns):
+    df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
+    return {
+        'data': [{
+            'type': 'parcoords',
+            'dimensions': [{
+                'label': col['name'],
+                'values': df[col['id']]
+            } for col in columns]
+        }]
+    }
+
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
