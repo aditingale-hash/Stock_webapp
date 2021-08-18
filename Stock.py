@@ -49,7 +49,7 @@ st.title('Enter Stock Value of your to check its cureent value')
 if(int_val > 1):
   st.title('cureent price of your stock')
  # data_normal['Open'] = data_normal['Open'].apply(lambda x: x*int_val)
- st.write( data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val))
+st.write( data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val))
   #data_normal['High'] = data_normal['High'].apply(lambda x: x*int_val)
  # data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
   #newData = data_normal.T
