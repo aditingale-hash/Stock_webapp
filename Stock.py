@@ -56,5 +56,5 @@ if(int_val > 1):
   newData = data_normal.T
   newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
   st.write(data.loc['Close',::-1])
-  st.write(data_normal['Close'])
+  #st.write(data_normal['Close'])
 
