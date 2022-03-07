@@ -49,12 +49,12 @@ st.title('Enter Stock Value of your to check its cureent value')
 #display data  now we can disply data like last 5 days so we can plot graph your turn
 if(int_val > 1):
   st.title('cureent price of your stock')
- # data_normal['Open'] = data_normal['Open'].apply(lambda x: x*int_val)
+ data_normal['Open'] = data_normal['Open'].apply(lambda x: x*int_val)
 data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val)
-  #data_normal['High'] = data_normal['High'].apply(lambda x: x*int_val)
- # data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
-  #newData = data_normal.T
-  # newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
-#st.write(data.loc['Close',::-1])
-#st.write(data_normal['Close'])
+  data_normal['High'] = data_normal['High'].apply(lambda x: x*int_val)
+  data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
+  newData = data_normal.T
+   newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
+st.write(data.loc['Close',::-1])
+st.write(data_normal['Close'])
 
