@@ -53,8 +53,8 @@ if(int_val > 1):
   data_normal['Close'] = data_normal['Close'].apply(lambda x: x*int_val)
   data_normal['High'] = data_normal['High'].apply(lambda x: x*int_val)
   data_normal['Low'] = data_normal['Low'].apply(lambda x: x*int_val)
-   newData = data_normal.T
-   newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
-st.write(data.loc['Close',::-1])
-st.write(data_normal['Close'])
+  newData = data_normal.T
+  newData = pd.DataFrame(newData,columns=['Open','Close','High', 'Low'])
+  st.write(data.loc['Close',::-1])
+  st.write(data_normal['Close'])
 
