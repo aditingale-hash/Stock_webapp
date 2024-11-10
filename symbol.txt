@@ -1,10 +1,50 @@
 Apple Inc.|AAPL
 Microsoft Corp.|MSFT
-Alphabet Inc.|GOOGL
 Amazon.com Inc.|AMZN
+Alphabet Inc. (Class A)|GOOGL
 Tesla Inc.|TSLA
 NVIDIA Corp.|NVDA
 Meta Platforms Inc.|META
 Johnson & Johnson|JNJ
 Visa Inc.|V
 Procter & Gamble Co.|PG
+JPMorgan Chase & Co.|JPM
+Walmart Inc.|WMT
+Mastercard Inc.|MA
+The Home Depot Inc.|HD
+Pfizer Inc.|PFE
+Intel Corp.|INTC
+Verizon Communications Inc.|VZ
+Cisco Systems Inc.|CSCO
+PepsiCo Inc.|PEP
+Coca-Cola Co.|KO
+Abbott Laboratories|ABT
+Walt Disney Co.|DIS
+Comcast Corp.|CMCSA
+Exxon Mobil Corp.|XOM
+Chevron Corp.|CVX
+Merck & Co. Inc.|MRK
+McDonald's Corp.|MCD
+Goldman Sachs Group Inc.|GS
+Boeing Co.|BA
+Salesforce Inc.|CRM
+Qualcomm Inc.|QCOM
+Adobe Inc.|ADBE
+Netflix Inc.|NFLX
+Costco Wholesale Corp.|COST
+Thermo Fisher Scientific Inc.|TMO
+Broadcom Inc.|AVGO
+Texas Instruments Inc.|TXN
+Amgen Inc.|AMGN
+Union Pacific Corp.|UNP
+3M Co.|MMM
+Honeywell International Inc.|HON
+American Express Co.|AXP
+Philip Morris International Inc.|PM
+IBM Corp.|IBM
+PayPal Holdings Inc.|PYPL
+Starbucks Corp.|SBUX
+Bristol-Myers Squibb Co.|BMY
+CVS Health Corp.|CVS
+Lockheed Martin Corp.|LMT
+Caterpillar Inc.|CAT
