@@ -28,17 +28,19 @@ data = yf.download(ticker, start=start_date, end=today_date)
 
 # Display the data if retrieved successfully
 if not data.empty:
-    # Show only the last 7 days of 'Close' prices
+    # Show only the last 7 days of 'Close' prices as a line chart
     last_7_days = data.tail(7)
-    st.write(f"Displaying data for the past 7 days for {stock} ({ticker})")
+    st.write(f"Displaying closing price data for the past 7 days for {stock} ({ticker})")
     st.line_chart(last_7_days['Close'])
 
     # Get the most recent closing price
     latest_close_price = last_7_days['Close'].iloc[-1]
-    total_value = latest_close_price * amount
-
-    # Display the calculation
     st.write(f"Latest closing price for {stock} ({ticker}): ${latest_close_price:.2f}")
-    st.write(f"Total value of your shares: ${total_value:.2f}")
+
+    # Display total value only if the user has entered an amount
+    if amount > 0:
+        total_value = latest_close_price * amount
+        st.write(f"**Total value of your shares:** ${total_value:.2f}")
+
 else:
     st.write("No data found for the selected stock.")
