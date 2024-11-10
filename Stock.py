@@ -2,6 +2,7 @@ import yfinance as yf
 import streamlit as st
 import pandas as pd
 from datetime import date, timedelta
+
 # Load stock symbols from symbol.txt
 symbol = {}
 with open("./symbol.txt") as f:
