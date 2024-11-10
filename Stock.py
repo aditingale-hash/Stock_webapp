@@ -33,7 +33,7 @@ if not data.empty:
     st.line_chart(last_7_days['Close'])
 
     # Input for the amount of stock owned
-amount = st.number_input("Enter the number of shares you own:", min_value=0.0, step=0.01)
+    amount = st.number_input("Enter the number of shares you own:", min_value=0.0, step=0.01)
 
     # Get the most recent closing price
     latest_close_price = last_7_days['Close'].iloc[-1]
