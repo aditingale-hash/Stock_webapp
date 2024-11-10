@@ -3,4 +3,5 @@
  pandas 
  datetime 
  timedelta
+yfinance
 
