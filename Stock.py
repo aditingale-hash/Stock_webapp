@@ -30,8 +30,8 @@ else:
     # Fetch stock data for the past 7 days using yfinance
     data = yf.download(ticker, start=start_date, end=today_date)
 
-    # Display the data if retrieved successfully
-    if not data.empty:
+    # Check if data is available
+    if not data.empty and 'Close' in data.columns:
         # Show only the last 7 days of 'Close' prices as a line chart
         last_7_days = data.tail(7)
         st.write(f"Displaying closing price data for the past 7 days for {stock} ({ticker})")
