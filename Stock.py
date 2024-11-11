@@ -39,7 +39,7 @@ else:
 
        
             # Display total value only if the user has entered an amount
-            if amount > 0:
+    if amount > 0:
                 total_value = latest_close_price * amount
                 st.write(f"Total value of your shares: {total_value:.2f}")
     else:
