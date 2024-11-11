@@ -6,7 +6,6 @@ This is a simple web application built with Streamlit and `yfinance` that allows
 ## Features
 - **Stock Selection from `symbol.txt`**: Users can choose stocks from a predefined list in `symbol.txt`.
 - **Live Stock Data**: Fetches the latest 7 trading days of closing prices for the selected stock using `yfinance`.
-- **Portfolio Value Calculation**: Users can enter the number of shares they own, and the application will calculate the total value based on the latest closing price.
 - **Market Closed Notification**: If the application is accessed on a non-trading day (e.g., Sunday), it displays a message informing the user that the market is closed.
 
 ## Future Enhancement: Dynamic Symbol Selection
