@@ -30,7 +30,7 @@ else:
     # Fetch stock data for the past 7 days using yfinance
     data = yf.download(ticker, start=start_date, end=today_date)
 
-    # Check if data is available
+    # Check if data is available and contains the 'Close' column
     if not data.empty and 'Close' in data.columns:
         # Show only the last 7 days of 'Close' prices as a line chart
         last_7_days = data.tail(7)
@@ -45,6 +45,5 @@ else:
         if amount > 0:
             total_value = latest_close_price * amount
             st.write(f"**Total value of your shares:** ${total_value:.2f}")
-
     else:
-        st.write("No data found for the selected stock.")
+        st.warning("No data found for the selected stock or the market data might be delayed.")
