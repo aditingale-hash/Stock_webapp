@@ -37,11 +37,7 @@ else:
         st.write(f"Displaying closing price data for the past 7 days for {stock}")
         st.line_chart(last_7_days['Close'])
 
-        # Attempt to get the most recent closing price if available
-        if not last_7_days['Close'].empty:
-            latest_close_price = last_7_days['Close'].iloc[-1]
-            st.write(f"Latest closing price: {latest_close_price:.2f}")
-
+       
             # Display total value only if the user has entered an amount
             if amount > 0:
                 total_value = latest_close_price * amount
