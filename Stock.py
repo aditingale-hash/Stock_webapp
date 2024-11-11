@@ -16,8 +16,6 @@ st.header("*Stock Portfolio Tracker*")
 stock = st.selectbox('Select the stock you own', symbol.keys())
 ticker = symbol[stock]  # Get the ticker code of the selected stock
 
-# Input for the amount of stock owned
-amount = st.number_input("Enter the number of shares you own:", min_value=0.0, step=0.01)
 
 # Define date range for the past 7 days
 today_date = date.today()
@@ -36,11 +34,3 @@ else:
         last_7_days = data.tail(7)
         st.write(f"Displaying closing price data for the past 7 days for {stock}")
         st.line_chart(last_7_days['Close'])
-
-       
-            # Display total value only if the user has entered an amount
-    if amount > 0:
-                total_value = latest_close_price * amount
-                st.write(f"Total value of your shares: {total_value:.2f}")
-    else:
-        st.warning("No data found for the selected stock or the market data might be delayed.")
